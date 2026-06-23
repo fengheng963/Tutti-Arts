@@ -1,0 +1,270 @@
+:root {
+  --night: #0B0B0B;
+  --ink: #1B1E23;
+  --soft-white: #F4F4F4;
+  --muted: rgba(255, 255, 255, .68);
+  --line: rgba(255, 255, 255, .24);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #FFFFFF;
+  background: var(--night);
+  font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+  letter-spacing: 0;
+}
+
+.navbar {
+  min-height: 74px;
+  background: rgba(0, 0, 0, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border: 3px solid #FFFFFF;
+  border-right: 0;
+  font-size: .9rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brand-logo {
+  width: 112px;
+  height: auto;
+  display: block;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, .78);
+  font-size: .9rem;
+  padding-inline: 1.6rem !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #FFFFFF;
+}
+
+.hero {
+  min-height: 720px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .1) 48%, rgba(0, 0, 0, .5)),
+    linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .25)),
+    url("../images/img-01.jpg") center / cover;
+  display: grid;
+  place-items: center;
+  padding-top: 74px;
+}
+
+.hero-title {
+  max-width: 720px;
+  font-size: clamp(2.1rem, 4vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.06;
+  text-align: center;
+  text-shadow: 0 16px 42px rgba(0, 0, 0, .58);
+}
+
+.intro {
+  background: #000000;
+  padding: 96px 0 84px;
+}
+
+.artist-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: grayscale(12%) contrast(1.05);
+}
+
+.intro-copy {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.intro-divider {
+  border-color: var(--line);
+  opacity: 1;
+  margin: 2rem 0 1.7rem;
+}
+
+.event-list {
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.85;
+}
+
+.schedule {
+  background: #EEEEEE;
+  color: #111111;
+  padding: 78px 0 92px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.event-card {
+  height: 100%;
+  border: 1px solid #D2D2D2;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+}
+
+.event-card img {
+  height: 185px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.event-card .card-body {
+  min-height: 122px;
+  padding: 1.55rem 1.35rem;
+}
+
+.event-card .card-text {
+  color: #151515;
+  font-weight: 500;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.footer {
+  min-height: 400px;
+  background: var(--ink);
+  color: rgba(255, 255, 255, .68);
+  padding: 74px 0;
+}
+
+.footer-logo {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: .04em;
+  margin-bottom: 1.1rem;
+}
+
+.social a,
+.contact-link {
+  color: rgba(255, 255, 255, .78);
+  text-decoration: none;
+}
+
+.social a:hover,
+.contact-link:hover {
+  color: #FFFFFF;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, .72);
+  border-radius: 50%;
+  color: #FFFFFF;
+  flex: 0 0 auto;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.back-top {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 2rem;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: #FFFFFF;
+  border: 3px solid rgba(255, 255, 255, .65);
+  border-radius: 50%;
+  background: rgba(11, 11, 11, .24);
+  text-decoration: none;
+  z-index: 10;
+}
+
+.back-top:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.social-label {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    padding: .75rem 0 !important;
+  }
+
+  .hero {
+    min-height: 620px;
+    background-position: 38% center;
+  }
+
+  .intro {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    min-height: 66px;
+  }
+
+  .hero {
+    min-height: 560px;
+    padding-inline: 1rem;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .schedule {
+    padding: 58px 0 70px;
+  }
+
+  .event-card img {
+    height: 210px;
+  }
+
+  .footer {
+    padding: 56px 0 76px;
+  }
+
+  .back-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
